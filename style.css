@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.cover{
+    background-image: url(images/cover/cover-1.png);
+}
+
+
+.img-overlay{
+    background: rgba(29, 29, 29, 0.7);
+    border-radius: 5px;
+}
+
+/* body start */
+
+.titleContactStatus{
+    color: #900613;
+    font-style: bold;
+}
+
+.userButton{
+    background: #900613;
+    border: 1px solid #E6E6E6;
+    border-radius: 30px;
+    color: #E6E6E6;
+    padding: 8px;
+}
+
+.secBox{
+background: #FF8484;
+}
+
+.taskMenu{
+    background: #AA0A11;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    color: #E6E6E6;
+}
+
+
+/* pending_App_text style  */
+/* .pending_App_text{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 36px;
+        color: #292929;
+}
+
+.date{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #7C7C7C;
+}
+
+
+/* NewRules style  */
+/* .NewRules{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 27px;
+        color: #303030;
+} */
+
+/* due date  */
+/* .dueDate{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+} */ */

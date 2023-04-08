@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robi</title>
+      <!-- tailwind link  -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+      tailwind.config = {
+      theme: {
+      extend: {
+      colors: {
+      clifford: '#da373d',
+
+      }
+      }
+      }
+      }
+      </script>
+
+<!-- bootstrap link  -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+     <!-- font link  -->
+      <link href="//db.onlinewebfonts.com/c/aef2da2daa6e15be44ff1a2706cc61a1?family=AvertaStd-Semibold" rel="stylesheet" type="text/css"/>
+      
+      <!-- icone link  -->
+      <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+</head>
+<body class="font-[AvertaStd-Semibold] container bg-[#FFF2FF] ">
+    <header class="bg-white">
+ <!----------------------------------- navbar start  -------------------------------------------->
+        <nav class="bg-[#FFF2FF]">
+            <div class=" flex justify-between items-center w-[92%] bg-[#FFF2FF] mx-auto ">
+            <!-- Logo  -->
+            <div>
+                <img class="w-16" src="img/Robi Logo.png" alt="">
+            </div>
+             <!-- nav list  -->
+                <div class="navLinkList duration-500 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+                    <ul class="flex items-center gap-[2vw]">
+                    <li>
+                    <a class="text-stone-400 hover:text-red-600" href="#">Dashboard</a>
+                    </li>
+                    <li>
+                    <a class="text-stone-400 hover:text-red-600" href="#">Contracts</a>
+                    </li>
+                    <li>
+                    <a class="text-stone-400 hover:text-red-600" href="#">Activities</a>
+                    </li>
+                    <li>
+                    <a class="text-stone-400 hover:text-red-600" href="#">Counterparties</a>
+                    </li>
+                    <li>
+                    <a class="text-stone-400 hover:text-red-600" href="#">Reports</a>
+                    </li>
+                    <li>
+                    <a class="text-stone-400 hover:text-red-600" href="#">Admin</a>
+                    </li>
+                    </ul>
+                </div>
+
+             <!-- nav list 2 : notification, user button  -->
+                <div>
+                    <ul class="flex items-center gap-2">
+                    <button class="bg-[#F3F3F3] rounded-full p-2 w-8 h-8 items-center"><img src="img/.png" alt="" ></button>
+                    <div>
+                    <button class="bg-[#F3F3F3] rounded-full p-2 w-8 h-8 items-center"><img src="img/Group 1.png" alt=""></button>
+                    <a href="">User Name</a>
+                    
+                    </div>
+                     <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+<!----------------------------------- navbar End  -------------------------------------------->
+
+
+
+    </header>
+     <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+</body>
+</html>
