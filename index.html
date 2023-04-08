@@ -1,94 +1,605 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robi</title>
-      <!-- tailwind link  -->
-      <script src="https://cdn.tailwindcss.com"></script>
-      <script>
-      tailwind.config = {
-      theme: {
-      extend: {
-      colors: {
-      clifford: '#da373d',
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-      }
-      }
-      }
-      }
-      </script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
-<!-- bootstrap link  -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- lg screen 1023 to 1512 -->
 
-
-     <!-- font link  -->
-      <link href="//db.onlinewebfonts.com/c/aef2da2daa6e15be44ff1a2706cc61a1?family=AvertaStd-Semibold" rel="stylesheet" type="text/css"/>
-      
-      <!-- icone link  -->
-      <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
 </head>
-<body class="font-[AvertaStd-Semibold] container bg-[#FFF2FF] ">
-    <header class="bg-white">
- <!----------------------------------- navbar start  -------------------------------------------->
-        <nav class="bg-[#FFF2FF]">
-            <div class=" flex justify-between items-center w-[92%] bg-[#FFF2FF] mx-auto ">
-            <!-- Logo  -->
-            <div>
-                <img class="w-16" src="img/Robi Logo.png" alt="">
-            </div>
-             <!-- nav list  -->
-                <div class="navLinkList duration-500 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
-                    <ul class="flex items-center gap-[2vw]">
+
+<body class="font-[Poppins] bg-[#FFF2FF] h-screen">
+    
+<!----------------------------------- navbar start  -------------------------------------------->
+    <header class="bg-[#FFF2FF] border-b-2">
+            <nav class="max-w-[92%] justify-between items-center underline-offset-[3px] flex  mx-auto sm:flex-row">
+                <!-- Logo  -->
+                <div>
+                    <img class="w-22" src="img/Robi Logo.png" alt="">
+                </div>
+                <!-- nav list  -->
+                <div
+                class="nav-links duration-500 bg-[#FFF2FF] md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+                    <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-6">
                     <li>
-                    <a class="text-stone-400 hover:text-red-600" href="#">Dashboard</a>
+                    <a class="text-stone-400 hover:text-red-600 " href="#">Dashboard</a>
                     </li>
                     <li>
-                    <a class="text-stone-400 hover:text-red-600" href="#">Contracts</a>
+                    <a class="text-stone-400 hover:text-red-600 " href="#">Contracts</a>
                     </li>
                     <li>
-                    <a class="text-stone-400 hover:text-red-600" href="#">Activities</a>
+                    <a class="text-stone-400 hover:text-red-600 " href="#">Activities</a>
                     </li>
                     <li>
-                    <a class="text-stone-400 hover:text-red-600" href="#">Counterparties</a>
+                    <a class="text-stone-400 hover:text-red-600 " href="#">Counterparties</a>
                     </li>
                     <li>
-                    <a class="text-stone-400 hover:text-red-600" href="#">Reports</a>
+                    <a class="text-stone-400 hover:text-red-600 " href="#">Reports</a>
                     </li>
                     <li>
-                    <a class="text-stone-400 hover:text-red-600" href="#">Admin</a>
+                    <a class="text-stone-400 hover:text-red-600 " href="#">Admin</a>
                     </li>
                     </ul>
                 </div>
 
-             <!-- nav list 2 : notification, user button  -->
-                <div>
-                    <ul class="flex items-center gap-2">
+                <!-- nav list 2 : notification, user button  -->
+                <div class="flex items-center gap-6">
                     <button class="bg-[#F3F3F3] rounded-full p-2 w-8 h-8 items-center"><img src="img/.png" alt="" ></button>
                     <div>
                     <button class="bg-[#F3F3F3] rounded-full p-2 w-8 h-8 items-center"><img src="img/Group 1.png" alt=""></button>
-                    <a href="">User Name</a>
-                    
+                    <a href="">User Name</a> 
                     </div>
-                     <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
-                    </ul>
+                    <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
                 </div>
-            </div>
-        </nav>
-<!----------------------------------- navbar End  -------------------------------------------->
-
-
-
+            </nav>
     </header>
-     <script>
+<!----------------------------------- navbar End  -------------------------------------------->
+<!----------------------------------- body start  -------------------------------------------->
+    
+                <!-- first section  -->                             
+
+    <!------------------------- 1st row  --------------------------->
+    <div class="w-[92%]  mx-auto grid sm:grid-cols-1 lg:grid-cols-4 gap-2">
+<!------------------ left side --------------------->
+                <div class="sm:col-span-2 md:col-span-1 lg:col-span-3">
+                    <div class="col-span-3 gap-2">
+                <div class="py-4">
+                <!-------------- status text  ------------------->
+                    <div class="grid grid-cols-4 gap-4 py-4">
+                    <div class="col-span-2 items-center text-xl "> Contract by Status </div>  
+                    <!-- button -->
+                    <button class="bg-[#900613] rounded-full text-white p-2">User name (Me)</button>              
+                    <button class="bg-[#900613] rounded-full text-white p-2">Year</button>
+                    </div>
+
+                <!---------------- 2nd part  --------------------->
+                <div class="bg-[#FF8484] px-5 py-2 rounded-lg"> 
+                    <div class="grid sm:grid-cols-3 lg:grid-cols-6 md:grid-cols-4   gap-4">
+                    <div class="gap-2 bg-[#900613] rounded-lg text-white p-2 flex">    
+                    <!-- task 1  -->
+                    <button>
+                    <div class="flex">
+                    <div class="flex items-center">
+                    <img src="img/Vector.png" alt="" srcset="">
+                    </div>
+                    <div class="flex p-2 ">
+                    <div>Task</div>
+                    </div>
+                    <div class="flex p-2 ">
+                    <div>01</div>
+                    </div>
+                    </div>
+                    </button>
+                    </div>
+                    <!-- task 2  -->
+                    <div class="taskMenu gap-2 bg-[#900613] rounded-lg text-white p-2">    
+                    <button>
+                    <div class="flex">
+                    <div class="flex items-center">
+                    <img src="img/Vector1.png" alt="" srcset="">
+                    </div>
+                    <div class="flex p-2 ">
+                    <div>Task</div>
+                    </div>
+                    <div class="flex p-2 ">
+                    <div>01</div>
+                    </div>
+                    </div>
+                    </button>
+                    </div>
+                    <!-- task 3  -->
+                    <div class="taskMenu gap-2 bg-[#900613] rounded-lg text-white p-2">    
+                    <button>
+                    <div class="flex">
+                    <div class="flex items-center">
+                    <img src="img/Vector2.png" alt="" srcset="">
+                    </div>
+                    <div class="flex p-2 ">
+                    <div>Task</div>
+                    </div>
+                    <div class="flex p-2 ">
+                    <div>01</div>
+                    </div>
+                    </div>
+                    </button>
+                    </div>
+                    <!-- task 4  -->
+                    <div class="taskMenu gap-2 bg-[#900613] rounded-lg text-white p-2">    
+                    <button>
+                    <div class="flex">
+                    <div class="flex items-center">
+                    <img src="img/Vector3.png" alt="" srcset="">
+                    </div>
+                    <div class="flex p-2 ">
+                    <div>Task</div>
+                    </div>
+                    <div class="flex p-2 ">
+                    <div>01</div>
+                    </div>
+                    </div>
+                    </button>
+                    </div>
+                    <!-- task 5  -->
+                 <div  class="taskMenu gap-2 bg-[#900613] rounded-lg text-white p-2">
+                    <button>
+                    <div class="flex">
+                    <div class="flex items-center">
+                    <img src="img/Vector1.png" alt="" srcset="">
+                    </div>
+                    <div class="flex p-2 ">
+                    <div>Task</div>
+                    </div>
+                    <div class="flex p-2 ">
+                    <div>01</div>
+                    </div>
+                    </div>
+                    </button>
+                    </div>
+                    <!-- task 6  -->
+                 <div class="taskMenu gap-2 bg-[#900613] rounded-lg text-white p-2">
+                    <button>
+                    <div class="flex">
+                    <div class="flex items-center">
+                    <img src="img/Vector1.png" alt="" srcset="">
+                    </div>
+                    <div class="flex p-2 ">
+                    <div>Task</div>
+                    </div>
+                    <div class="flex p-2 ">
+                    <div>01</div>
+                    </div>
+                    </div>
+                    </button>
+                    </div>
+                    </div>
+                </div>
+                </div> 
+                <div class="grid lg:grid-flow-col md:grid-flow-col sm:grid-flow-row">                        
+                <!-- pending contract start -->
+                <div class=" border rounded-[10px] bg-[#F5E9F1] border-[#C40C42] p-4">
+                    <div class="grid grid-cols-5 gap-6">
+                    <div class="col-span-3 items-center text-xl p-4"> Pending Contracts</div>  
+                    <!-- button -->
+                    <button><div class="bg-[#900613] rounded-full text-white p-1">Me</div></button>              
+                    <button><div class="bg-[#900613] rounded-full text-white p-1">Month</div></button>
+                    </div>
+                    <div class="grid lg:grid-flow-col md:grid-flow-row sm:grid-cols-2 gap-2 p-2 mx-auto">
+                <!-- pending contract details  -->
+                <div class="px-1 h-[82px]">
+                    <!-- Negotiation Pending  -->
+                    <div class="flex bg-white  rounded-xl  p-1 gap-1">
+                        <div class="grid p-2">
+                            <div class="text-3xl">20</div>
+                            <div class="text-[14px] w-40"> Negotiation Pending</div>
+                        </div> 
+                        <div class=" flex items-center">
+                            <img class="bg-[#FFE7E7] drop-shadow-md p-2 rounded-lg " src="img/VectorNpending.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- pending contract details  -->
+                    <div class="px-1 h-[82px] ">
+                    <!-- Approval Pending  -->
+                    <div class="flex bg-white  rounded-xl p-1 gap-1">
+                        <div class="grid p-2">
+                            <div class="text-3xl">20</div>
+                            <div class="text-[14px] w-40">Approval Pending</div>
+                        </div> 
+                        <div class=" flex items-center">
+                            <img class="bg-[#FFE7E7] drop-shadow-md p-2 rounded-lg " src="img/VectorNpending.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- pending contract details  -->
+                <div class="px-1 ">
+                    <!-- Sign Pending   -->
+                    <div class="flex bg-white  rounded-xl p-1 gap-1">
+                        <div class="grid p-2">
+                            <div class="text-3xl">20</div>
+                            <div class="text-[14px] w-40"> Sign Pending </div>
+                        </div> 
+                        <div class=" flex items-center">
+                            <img class="bg-[#FFE7E7] drop-shadow-md p-2 rounded-lg " src="img/VectorNpending.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- pending contract details  -->
+                        <div class="px-1 h-[82px]">
+                    <!-- Nearing Renewal -->
+                    <div class="flex bg-white  rounded-xl  p-1 gap-1">
+                        <div class="grid p-2">
+                            <div class="text-3xl">20</div>
+                            <div class="text-[14px] w-40"> Nearing Renewal </div>
+                        </div> 
+                        <div class=" flex items-center">
+                            <img class="bg-[#FFE7E7] drop-shadow-md p-2 rounded-lg " src="img/VectorNpending.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+                </div> 
+
+
+                </div>
+                </div>        
+<!----------------- right side calender --------------->
+                <div class="sm:col-span-2 md:col-span-1 lg: bg-white rounded-lg shadow-md shadow-[#C9C9C9] border border-[#C9C9C9] m-2 mx-auto">   
+            
+                <div  class="grid grid-flow-col gap-4 p-2 ">
+                <p class="text-xl ">Calender</p>
+                <p class="flex text-lg">Month</p>
+                </div>
+                <div class="grid justify-items-center bg-red-300 m-2"> Month </div>
+                
+                <!-- table  -->
+                <table class="">
+
+                <tbody>
+                <tr>
+                <th class="p-2">Sat</th>
+                <th class="p-2">Sun</th>
+                <th class="p-2">Mon</th>
+                <th class="p-2">Tue</th>
+                <th class="p-2">Wed</th>
+                <th class="text-rose-700 p-2">Thu</th>
+                <th class="text-rose-700 p-2">Fri</th>
+                </tr>
+
+                <tr>
+                <td class="p-2 hover:bg-pink-300 rounded-md">01</td>
+                <td class="p-2 hover:bg-pink-300 rounded-md">02</td>
+                <td class="p-2 hover:bg-pink-300 rounded-md">03</td>
+                <td class="p-2 hover:bg-pink-300 rounded-md">04</td>
+                <td class="p-2 hover:bg-pink-300 rounded-md">05</td>
+                <td class="hover:decoration-pink-800 text-violet-700 p-2 hover:bg-pink-300 rounded-md">06</td>
+                <td class="hover:decoration-pink-800 text-violet-700 p-2 hover:bg-pink-300 rounded-md">07</td>
+                </tr>
+                <tr>
+                <td class="p-2 hover:bg-pink-300 rounded-md">8</td>
+                <td class="p-2 hover:bg-pink-300 rounded-md">9</td>
+                <td class="p-2 hover:bg-pink-300 rounded-md">10</td>
+                <td class="p-2 hover:bg-pink-300 rounded-md">11</td>
+                <td class="p-2 hover:bg-pink-300 rounded-md">12</td>
+                <td class="hover:decoration-pink-800 text-violet-700 p-2 hover:bg-pink-300 rounded-md">13</td>
+                <td class="hover:decoration-pink-800 text-violet-700 p-2 hover:bg-pink-300 rounded-md">14</td>
+                </tr>
+                <tr>
+                <td class="p-2 hover:bg-pink-300 rounded-md">15</td>
+                <td class="p-2 hover:bg-pink-300 rounded-md">16</td>
+                <td class="p-2 hover:bg-pink-300 rounded-md">17</td>
+                <td class="p-2 hover:bg-pink-300 rounded-md">18</td>
+                <td class="p-2 hover:bg-pink-300 rounded-md">19</td>
+                <td class="hover:decoration-pink-800 text-violet-700 p-2 hover:bg-pink-300 rounded-md">20</td>
+                <td class="hover:decoration-pink-800 text-violet-700 p-2 hover:bg-pink-300 rounded-md">21</td>
+                </tr>
+                <tr>
+                <td class="p-2 hover:bg-pink-300 rounded-md">22</td>
+                <td class="p-2 hover:bg-pink-300 rounded-md">23</td>
+                <td class="p-2 hover:bg-pink-300 rounded-md">24</td>
+                <td class="p-2 hover:bg-pink-300 rounded-md">25</td>
+                <td class="p-2 hover:bg-pink-300 rounded-md">26</td>
+                <td class="hover:decoration-pink-800 text-violet-700 p-2 hover:bg-pink-300 rounded-md">27</td>
+                <td class="hover:decoration-pink-800 text-violet-700 p-2 hover:bg-pink-300 rounded-md">28</td>
+                </tr>
+                <tr>
+                <td class="p-2 hover:bg-pink-300 rounded-md">29</td>
+                <td class="p-2 hover:bg-pink-300 rounded-md">30</td>
+                <td class="p-2 hover:bg-pink-300 rounded-md">31</td>
+                <td class="p-2 hover:bg-pink-300 rounded-md">01</td>
+                <td class="p-2 hover:bg-pink-300 rounded-md">02</td>
+                <td class="hover:decoration-pink-800 text-pink-600 p-2 hover:bg-pink-300 rounded-md">03</td>
+                <td class="hover:decoration-pink-800 text-pink-600 p-2 hover:bg-pink-300 rounded-md">04</td>
+                </tr>
+                </tbody>
+                </table>
+                
+                </div>
+                
+                </div>
+    </div>
+    <!------------------------- 2nd row  --------------------------->
+       <div class="w-[92%]  mx-auto grid sm:grid-cols-1 lg:grid-cols-4 gap-2">
+                <!-- left side  -->
+                        <div class="sm:col-span-2 md:col-span-1 lg:col-span-3 bg-white shadow-md rounded-lg m-2  border border-[#C9C9C9] p-4">
+                        <div class="grid grid-flow-col md:grid-cols-2  my-2  gap-8">
+                            <!-- 1st  -->
+                            <div class="col-span-1 px-4">
+                                <div class="text-[24px] font-semibold text-[#292929]">To Approve</div> 
+                               
+                                <div class="flex gap-4 py-4" >      
+                                <div>
+                                    <input class="autofill:bg-yellow-200" id="draft" class="peer/rules" type="radio" name="status" checked />
+                                </div>
+                                <div >
+                                    <p class="text-lg font-semibold text-[#303030]"> New Rules & Policy </p>
+                                    <p class="text-sm font-regular text-[#7C7C7C]">Today, 03:45 PM</p>
+                                </div>
+                                 </div>
+                                 <div class="flex gap-4 " >      
+                                <div>
+                                    <input class="" id="draft" class="peer/rules" type="radio" name="status" checked />
+                                </div>
+                                <div>
+                                    <p class="text-lg font-semibold text-[#303030]"> New Rules & Policy </p>
+                                    <p class="text-sm font-regular text-[#7C7C7C]">Today, 03:45 PM</p>
+                                </div>
+                                 </div>
+                                        
+                            </div>
+                            <!-- 2nd  -->
+                        
+                            <div class="col-span-1 px-8">
+                                <div class="text-[24px] font-semibold text-[#292929]">Pending Application (2)</div> 
+                                <!-- radio button  -->
+                                <div class="flex gap-4 py-2" >      
+
+                                <div>
+                                    <p class="text-[18px] font-bold text-[#303030]">New Rules & Policy</p>
+                                    <p class="text-[14px] font-semibold text-[#7B1A67]">Due: August 31, 2022</p>
+                                </div>
+                                 </div>
+                                 <div class="flex gap-4 " >      
+
+                                <div>
+                                    <p class="text-[18px] font-bold text-[#303030]"> New Rules & Policy </p>
+                                    <p class="text-[14px] font-semibold text-[#7B1A67]">Due: August 31, 2022</p>
+                                </div>
+                                 </div>
+                                </div>
+
+                                <!-- 3rd  -->
+                                <div class="text-[20px] font-medium text-[#7B1A67]">
+                                    <a href="">See All </a>  
+                                </div>
+                                 
+                            
+                            
+                        </div>
+                        </div>
+                <!-- right side  -->
+                        <div class="sm:col-span-2 md:col-span-1 bg-white shadow-md p-4 rounded-lg m-2  border border-[#C9C9C9] m-2"> 
+                                
+                                <div class="text-[26px] font-semibold text-[#292929]">Month’s Event</div> 
+                            <div class="grid py-4 gap-4">
+                                <div class="grid grid-flow-col gap-4 " >      
+                               <div class="bg-[#7B1A67] px-4 py-2 rounded-[22px] text-white flex-row items-center">
+                                    <p class="items-center" >31</p> 
+                                    <p class="items-center" >Aug</p> 
+                                </div>
+                                <div>
+                                    <p class="text-[20px] font-medium text-[#303030]">Obligation Due date</p>
+                                    <p class="text-[16px] font-medium text-[#7C7C7C]">New Rules</p>
+                                </div>
+                                 </div>
+
+                                 <div class="grid grid-flow-col gap-4 " >      
+                               <div class="bg-[#7B1A67] px-4 py-2 rounded-[22px] text-white flex-row items-center">
+                                    <p class="items-center" >31</p> 
+                                    <p class="items-center" >Aug</p> 
+                                </div>
+                                <div>
+                                    <p class="text-[20px] font-medium text-[#303030]">Obligation Due date</p>
+                                    <p class="text-[16px] font-medium text-[#7C7C7C]">New Rules</p>
+                                </div>
+                                 </div>
+
+                                </div>
+                        </div>
+                        
+                        
+        </div>
+
+                                
+    <!------------------------- 3rd row  ---------------------------->
+           <div class="w-[92%]  mx-auto grid sm:grid-cols-1 lg:grid-cols-4 gap-2">
+                <!-- left side  -->
+                        <div class="sm:col-span-2 md:col-span-1 lg:col-span-3 bg-white shadow-md rounded-lg m-2  border border-[#C9C9C9] p-4">
+                        <div class="grid grid-flow-col my-2 mx-auto sm:grid-cols-2 md:grid-cols-2 ">
+                            <!-- 1st  -->
+                            <div class="col-span-3 md:col-span-2 px-4 mx-auto">
+                                <div>
+                                    <p class="text-[21px] font-semibold text-[#7C7C7C]">Total Contract Value</p>
+                                </div> 
+                               <div class="flex gap-8 py-8 justify-center items-center">
+                                 <div class="grid col-span-1 gap-2">
+                                <div class="bg-[#F3F3F3] rounded-lg p-8 justify-center items-center">
+                                    <p class="text-[#7B1A67] font-semibold text-[16px]">SELL</p>
+                                    <p class="text-[#101010] font-semibold text-[18px]">Tk 10000</p>
+                                </div>
+                                <div class="bg-[#F3F3F3] rounded-lg p-8 justify-center items-center">
+                                    <p class="text-[#7B1A67] font-semibold text-[16px]">SELL</p>
+                                    <p class="text-[#101010] font-semibold text-[18px]">Tk 10000</p>
+                                </div>
+                                </div>
+                                <div class="col-span-1 text-[20px] font-semibold text-[#292929] border-t-2">
+                                   Upcoming Contracts 
+                                </div>
+
+                                <div class="col-span-1">
+                                    <p class="font-semibold text-[#C9C9C9] font-[23px]">No Data Available</p>
+                                    <div class="py-6"><p class="font-semibold text-[#292929] font-[20px] border-t-2"> Active Contracts</p></div>
+                                </div>
+
+                                <div class="grid col-span-1 gap-2">
+                                <div class="bg-[#F3F3F3] rounded-lg p-6 justify-center items-center">
+                                    <p class="text-[#7B1A67] font-semibold text-[16px]">SELL</p>
+                                    <p class="text-[#101010] font-semibold text-[18px]">Tk 0</p>
+                                </div>
+                                 <div class="bg-[#F3F3F3] rounded-lg p-6 justify-center items-center">
+                                    <p class="text-[#7B1A67] font-semibold text-[16px]">SELL</p>
+                                    <p class="text-[#101010] font-semibold text-[18px]">Tk 0</p>
+                                </div>
+                                </div>
+
+                               </div>
+                                
+                            </div>
+                            <!-- 2nd  -->
+                        
+                            <div class="col-span-1 mx-auto">
+                                
+                                <button class=" flex justify-center items-center bg-white border focuse:outline-none shadow text-gray-600 rounded-full focuse:ring ring-gray-300 group">
+                                    <p class="px-4 text-[#7C7C7C] text-[16px] font-medium">Dropdown</p>
+                                    <span class="border-l rounded-full p-2 hover:bg-red-100">
+                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.975q-.2 0-.388-.075t-.312-.2l-4.6-4.6q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062Z"/></svg>
+                                    </span>
+        
+                                </button>
+
+                                </div>          
+                        </div>
+
+                        </div>
+                <!-- right side  -->
+                        <div class="sm:col-span-2 md:col-span-1 bg-white shadow-md p-4 rounded-lg m-2  border border-[#C9C9C9] m-2"> 
+
+                            <!-- Schedule  -->
+                <div  class="grid grid-flow-col gap-4 p-2 ">
+                <p class="text-xl ">Schedule</p>
+                <div class="grid grid-flow-col p bg-[#C40C42] rounded-full">
+                <img class="p-2 flex" src="img/calender icone.png" alt="">
+                <p class="flex text-md text-white p-2">12-8-2022</p>
+                </div>
+                </div>
+
+                <!-- event 1 -->
+                <div class="flex gap-4 bg-[#F1F2F7] p-2">
+                    <!-- right  -->
+                    <div class="col-span-2">
+                        <div class="font-semibold text-[12px] text-[#7B1A67] ">Group Meeting</div>
+                        <div class="flex flex-row">
+                            <div class="grid items-center px-2"><img src="img/clock.png" alt=""></div>
+                            <p class="font-semibold text-[11px] text-[#7B1A67]">3.30 pm</p>
+                        </div>
+                    </div>
+                    <!-- left  -->
+                    <div class="col-span-1 flex gap-2 px-2 items-center">
+                        <div class="flex items-start"><img src="img/location.png" alt=""></div>
+                        <div class="font-semibold text-[11px] text-[#898989] items-center">Conference Room A1</div>
+                    </div>
+
+                </div>
+
+                                <!-- event 2 -->
+                <div class="flex gap-4 bg-[#FFFFFF] p-2">
+                    <!-- right  -->
+                    <div class="col-span-2">
+                        <div class="font-semibold text-[12px] text-[#7B1A67] ">Group Meeting</div>
+                        <div class="flex flex-row">
+                            <div class="grid items-center px-2"><img src="img/clock.png" alt=""></div>
+                            <p class="font-semibold text-[11px] text-[#7B1A67]">3.30 pm</p>
+                        </div>
+                    </div>
+                    <!-- left  -->
+                    <div class="col-span-1 flex gap-2 px-2 items-center">
+                        <div class="flex items-start"><img src="img/location.png" alt=""></div>
+                        <div class="font-semibold text-[11px] text-[#898989] items-center">Conference Room A1</div>
+                    </div>
+
+                </div>
+
+                                <!-- event 3 -->
+                <div class="flex gap-4 bg-[#F1F2F7] p-2">
+                    <!-- right  -->
+                    <div class="col-span-2">
+                        <div class="font-semibold text-[12px] text-[#7B1A67] ">Group Meeting</div>
+                        <div class="flex flex-row">
+                            <div class="grid items-center px-2"><img src="img/clock.png" alt=""></div>
+                            <p class="font-semibold text-[11px] text-[#7B1A67]">3.30 pm</p>
+                        </div>
+                    </div>
+                    <!-- left  -->
+                    <div class="col-span-1 flex gap-2 px-2 items-center">
+                        <div class="flex items-start"><img src="img/location.png" alt=""></div>
+                        <div class="font-semibold text-[11px] text-[#898989] items-center">Conference Room A1</div>
+                    </div>
+
+                </div>
+
+                                <!-- event 4 -->
+                <div class="flex gap-4 bg-[#FFFFFF] p-2">
+                    <!-- right  -->
+                    <div class="col-span-2">
+                        <div class="font-semibold text-[12px] text-[#7B1A67] ">Group Meeting</div>
+                        <div class="flex flex-row">
+                            <div class="grid items-center px-2"><img src="img/clock.png" alt=""></div>
+                            <p class="font-semibold text-[11px] text-[#7B1A67]">3.30 pm</p>
+                        </div>
+                    </div>
+                    <!-- left  -->
+                    <div class="col-span-1 flex gap-2 px-2 items-center">
+                        <div class="flex items-start"><img src="img/location.png" alt=""></div>
+                        <div class="font-semibold text-[11px] text-[#898989] items-center">Conference Room A1</div>
+                    </div>
+
+                </div>
+
+                                <!-- event 5 -->
+                <div class="flex gap-4 bg-[#F1F2F7] p-2">
+                    <!-- right  -->
+                    <div class="col-span-2">
+                        <div class="font-semibold text-[12px] text-[#7B1A67] ">Group Meeting</div>
+                        <div class="flex flex-row">
+                            <div class="grid items-center px-2"><img src="img/clock.png" alt=""></div>
+                            <p class="font-semibold text-[11px] text-[#7B1A67]">3.30 pm</p>
+                        </div>
+                    </div>
+                    <!-- left  -->
+                    <div class="col-span-1 flex gap-2 px-2 items-center">
+                        <div class="flex items-start"><img src="img/location.png" alt=""></div>
+                        <div class="font-semibold text-[11px] text-[#898989] items-center">Conference Room A1</div>
+                    </div>
+
+                </div>
+
+                        </div>
+                        
+                        
+        </div>                              
+                                    
+
+<!----------------------------------- body end    -------------------------------------------->
+
+
+    <script>
         const navLinks = document.querySelector('.nav-links')
         function onToggleMenu(e){
             e.name = e.name === 'menu' ? 'close' : 'menu'
             navLinks.classList.toggle('top-[9%]')
         }
+    </script>
 </body>
+
 </html>
