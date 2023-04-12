@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    <!-- lg screen 1023 to 1512 -->
+
+
+</head>
+
+<body class="font-[Poppins] bg-white h-screen">
+    
+<!----------------------------------- navbar start  -------------------------------------------->
+    <header class="bg-[#E8B0F9] border-b-2">
+            <nav class="max-w-[92%] justify-between items-center underline-offset-[3px] flex  mx-auto sm:flex-row">
+                <!-- Logo  -->
+                <div>
+                    <img class="w-22" src="img/logo.png" alt="">
+                </div>
+                <!-- nav list  -->
+
+
+                <!-- nav list 2 : notification, user button  -->
+                <div class="flex items-center gap-6">
+
+                    <button class="bg-[#F3F3F3] rounded-full p-2 w-8 h-8 items-center"><img src="img/Group 1.png" alt=""></button>
+                    
+                    </div>
+                    <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+                </div>
+            </nav>
+    </header>
+<!----------------------------------- navbar End  -------------------------------------------->
+<!----------------------------------- body start  -------------------------------------------->
+                <div class=" mx-auto my-8 flex justify-center items-center place-content-center ">
+                    <form class=" " action="">
+                    <div class="font-medium text-[20px]">Hello , 
+                    <a class="font-semibold text-[20px]" href=""> User !</a></div>
+                    <div><p class="font-regular text-[14px]">Start using reddox Contracts by using your Organization </p></div>
+                    <div>
+                    <label class="font-regular text-[12px]" for="Organization name">Organization name</label>
+                    <div class="bg-[#FFF4FD] drop-shadow-sm"><input type="button" value=""></div>
+                    </div>
+
+                    <div>
+                    <label class="font-regular text-[12px]" for="Organization name">Organization URL</label>
+                     <div class="bg-[#FFF4FD] drop-shadow-sm"><input class="font-regular text-[9px] font-[#5F5F5F] p-2" type="button" value="https:/ contracts.reddox.com/"></div>
+                    </div>
+
+                    <div>
+                    <label class="font-regular text-[12px]" for="Organization name">Currency</label>
+                    <input class="font-regular text-[12px]" type="text" value="BDT - Bangladesh taka">
+                     <div class="bg-[#FFF4FD] drop-shadow-sm"><input class="font-regular text-[9px] font-[#5F5F5F] p-2" type="button" value="BDT - Bangladesh taka"></div>
+                    </div>
+
+                    <div class="flex font-regular text-[12px] p-4"><p>Currency once set  cannot be changed later.</p></div>
+
+                    <div class="bg-[#900613] font-regular text-[12px] text-center p-2 text-white"><button>Save and Continue</button></div>
+                    </form>
+                </div>
+<!----------------------------------- body end    -------------------------------------------->
+
+
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+    </script>
+</body>
+
+</html>

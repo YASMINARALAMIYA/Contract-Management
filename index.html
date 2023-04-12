@@ -470,13 +470,31 @@
                         
                             <div class="col-span-1 mx-auto">
                                 
-                                <button class=" flex justify-center items-center bg-white border focuse:outline-none shadow text-gray-600 rounded-full focuse:ring ring-gray-300 group">
-                                    <p class="px-4 text-[#7C7C7C] text-[16px] font-medium">Dropdown</p>
-                                    <span class="border-l rounded-full p-2 hover:bg-red-100">
-                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14.975q-.2 0-.388-.075t-.312-.2l-4.6-4.6q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062Z"/></svg>
-                                    </span>
-        
-                                </button>
+                               
+                                
+
+<button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown divider <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+
+<!-- Dropdown menu -->
+<div id="dropdownDivider" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDividerButton">
+      <li>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+      </li>
+      <li>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+      </li>
+      <li>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+      </li>
+    </ul>
+    <div class="py-2">
+      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Separated link</a>
+    </div>
+</div>
+
+
+
 
                                 </div>          
                         </div>
@@ -527,10 +545,10 @@
                         <div class="flex items-start"><img src="img/location.png" alt=""></div>
                         <div class="font-semibold text-[11px] text-[#898989] items-center">Conference Room A1</div>
                     </div>
-
+                    
                 </div>
 
-                                <!-- event 3 -->
+                   <!-- event 3 -->
                 <div class="flex gap-4 bg-[#F1F2F7] p-2">
                     <!-- right  -->
                     <div class="col-span-2">
@@ -547,8 +565,8 @@
                     </div>
 
                 </div>
-
-                                <!-- event 4 -->
+                
+                    <!-- event 4 -->
                 <div class="flex gap-4 bg-[#FFFFFF] p-2">
                     <!-- right  -->
                     <div class="col-span-2">
